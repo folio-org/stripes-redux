@@ -1,6 +1,6 @@
 # Change history for stripes-redux
 
-## 1.0.1 (IN PROGRESS)
+## [1.0.1](https://github.com/folio-org/stripes-redux/tree/v1.0.1) (2017-07-18)
 
 * Add filter operator
 
