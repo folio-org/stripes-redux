@@ -1,18 +1,17 @@
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import './operators';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject'; // eslint-disable-line
+import 'rxjs/add/operator/mergeMap'; // eslint-disable-line
 
-const epic$ = new BehaviorSubject(combineEpics());
-const rootEpic = (action$, store) =>
-  epic$.mergeMap(epic => epic(action$, store));
+export default function configureEpics(...initialEpics) {
+  const epic$ = new BehaviorSubject(combineEpics(...initialEpics));
+  const rootEpic = (action$, store) =>
+    epic$.mergeMap(epic => epic(action$, store));
+  const middleware = createEpicMiddleware(rootEpic);
 
-export const epicMiddleware = createEpicMiddleware(rootEpic);
-
-export function addEpic(epic) {
-  return epic$.next(epic);
-}
-
-export function addEpics(epics) {
-  if (!epics || !epics.length) return;
-  epics.forEach(epic => addEpic(epic));
+  return {
+    middleware,
+    add: (...epics) => {
+      epics.forEach(epic => epic$.next(epic));
+    },
+  };
 }

@@ -1,1 +1,1 @@
-export * from './src/epics';
+export { default as configureEpics } from './src/epics';

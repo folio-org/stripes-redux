@@ -1,5 +1,9 @@
 # Change history for stripes-redux
 
+## [1.1.0](https://github.com/folio-org/stripes-redux/tree/v1.1.0) (2017-08-13)
+
+# Refactor epics setup
+
 ## [1.0.1](https://github.com/folio-org/stripes-redux/tree/v1.0.1) (2017-07-18)
 
 * Add filter operator
