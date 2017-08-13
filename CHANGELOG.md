@@ -2,7 +2,7 @@
 
 ## [1.1.0](https://github.com/folio-org/stripes-redux/tree/v1.1.0) (2017-08-13)
 
-# Refactor epics setup
+# Refactor epics initialization. Fixes SRDX-2.
 
 ## [1.0.1](https://github.com/folio-org/stripes-redux/tree/v1.0.1) (2017-07-18)
 
