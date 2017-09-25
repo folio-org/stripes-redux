@@ -18,14 +18,11 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",
-    "chai": "^4.0.2",
-    "enzyme": "^2.6.0",
     "eslint": "^4.7.2",
     "eslint-config-stripes": "^0.0.1",
-    "fetch-mock": "^5.6.2",
-    "jsdom": "^11.0.0",
-    "jsdom-global": "^3.0.2",
-    "mocha": "^3.1.2"
+    "redux": "^3.7.2",
+    "rxjs": "^5.4.3",
+    "webpack": "^3.6.0"
   },
   "dependencies": {
     "redux-observable": "^0.15.0"
