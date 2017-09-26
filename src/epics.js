@@ -1,6 +1,6 @@
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject'; // eslint-disable-line
-import 'rxjs/add/operator/mergeMap'; // eslint-disable-line
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import 'rxjs/add/operator/mergeMap';
 
 export default function configureEpics(...initialEpics) {
   const epic$ = new BehaviorSubject(combineEpics(...initialEpics));
